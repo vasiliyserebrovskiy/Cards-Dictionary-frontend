@@ -7,6 +7,13 @@
   background: #ebe7e7;
   border-radius: 4px;
 }
-.error {
+/* .error {
   color: red;
+} */
+
+.signupLink {
+  display: flex;
+  align-self: center;
+  color: darkblue;
+  font-style: italic;
 }
