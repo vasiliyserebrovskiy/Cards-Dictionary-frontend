@@ -16,7 +16,7 @@ export default function ThemeToggler() {
   return (
     <button
       type="button"
-      className="p-0.5 border rounded"
+      className="p-0.5 border rounded-3xl w-[24px] h-[24px] flex items-center justify-center text-[16px] leading-none"
       onClick={() => setTheme(resolvedTheme === "dark" ? "light" : "dark")}
     >
       {resolvedTheme === "dark" ? "🌞" : "🌛"}

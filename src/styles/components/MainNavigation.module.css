@@ -1,20 +1,10 @@
-/* <weight>: Use a value from 400 to 900 */
-/* <uniquifier>: Use a unique and descriptive class name */
-
-/* .playfair-display-text {
-  font-family: "Playfair Display", serif;
-  font-optical-sizing: auto;
-  font-weight: 500;
-  font-style: normal;
-} */
-
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
 
 .mainSection {
   display: flex;
   justify-content: center;
   height: 50px;
-  background-color: blue;
+  /* background-color: blue; */
 }
 
 .navSection {
@@ -25,7 +15,7 @@
   font-family: "Playfair Display", serif;
   font-optical-sizing: auto;
   font-weight: 900;
-  font-size: 26px;
+  font-size: 24px;
   font-style: normal;
   /* padding: 10px; */
 }
