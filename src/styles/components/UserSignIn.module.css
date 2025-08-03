@@ -1,0 +1,12 @@
+.mainDiv {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  width: 590px;
+  padding: 60px;
+  background: #ebe7e7;
+  border-radius: 4px;
+}
+.error {
+  color: red;
+}
