@@ -9,3 +9,8 @@ export interface SignUpCredentials {
   firstName: string;
   lastName: string;
 }
+
+export interface AuthContextType {
+  isAuthorized: boolean;
+  setIsAuthorized: (args: boolean) => void;
+}

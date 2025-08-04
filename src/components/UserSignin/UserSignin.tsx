@@ -7,8 +7,10 @@ import FormInput from "../FormInput/FormInput";
 import FormButton from "../FormButton/FormButton";
 import style from "@/styles/components/UserSignIn.module.css";
 import Link from "next/link";
+import { useAuthContext } from "@/hooks/useAuthContext";
 
 export default function UserSignin() {
+  const { setIsAuthorized } = useAuthContext();
   const userSigninSchema = Yup.object({
     login: Yup.string()
       .email("Please enter a valid email address")
@@ -34,6 +36,8 @@ export default function UserSignin() {
     validateOnChange: false,
     onSubmit: (values: SignInCredentials) => {
       console.log(values);
+      setIsAuthorized(true);
+      // localStorage.setItem("isAuthorized", "true");
       //TODO: here we run function for sending request to our backend for login!
     },
   });
