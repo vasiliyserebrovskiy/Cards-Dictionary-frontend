@@ -4,6 +4,7 @@ import style from "@/styles/components/MainNavigation.module.css";
 import ThemeToggler from "../ThemeToggler/ThemeToggler";
 import { useAuthContext } from "@/hooks/useAuthContext";
 import ProfileMenu from "../ProfileMenu/ProfileMenu";
+import DictionaryMenu from "../DictionaryMenu/DictionaryMenu";
 
 export default function MainNavigation() {
   // for now use isAuthorized as temp solution for building menu logic. Later when I deside, what type of Authorization I will use, I change this logic!
@@ -18,6 +19,7 @@ export default function MainNavigation() {
       <nav className={style.navSection}>
         <Link href={"/"}>Home</Link>
         <Link href={"/about"}>About</Link>
+        {isAuthorized && <DictionaryMenu />}
         {isAuthorized && <ProfileMenu />}
         {!isAuthorized && <Link href={"/signin"}>Sign In</Link>}
         {isAuthorized && (

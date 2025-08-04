@@ -2,7 +2,7 @@
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 
-export default function ProfileMenu() {
+export default function DictionaryMenu() {
   const [isOpen, setIsOpen] = useState(false);
   const menuRef = useRef<HTMLDivElement>(null);
 
@@ -29,7 +29,7 @@ export default function ProfileMenu() {
         onClick={() => setIsOpen((prev) => !prev)}
         className="px-4 py-2  rounded hover:cursor-pointer"
       >
-        Profile
+        My Dictionary
       </button>
 
       {isOpen && (
@@ -43,20 +43,38 @@ export default function ProfileMenu() {
           <ul>
             <li className="hover:bg-gray-500 cursor-pointer">
               <Link
-                href="/profile"
+                href="/create-new-word"
                 className="px-4 py-2 block w-full h-full"
                 onClick={handleMenuClick}
               >
-                Profile
+                Create new word
               </Link>
             </li>
             <li className="hover:bg-gray-500 cursor-pointer">
               <Link
-                href="/change-password"
+                href="/edit-word"
                 className="px-4 py-2 block w-full h-full"
                 onClick={handleMenuClick}
               >
-                Change password
+                Edit word
+              </Link>
+            </li>
+            <li className="hover:bg-gray-500 cursor-pointer">
+              <Link
+                href="/all-words"
+                className="px-4 py-2 block w-full h-full"
+                onClick={handleMenuClick}
+              >
+                View all words
+              </Link>
+            </li>
+            <li className="hover:bg-gray-500 cursor-pointer">
+              <Link
+                href="/learn-words"
+                className="px-4 py-2 block w-full h-full"
+                onClick={handleMenuClick}
+              >
+                Learn words
               </Link>
             </li>
           </ul>
